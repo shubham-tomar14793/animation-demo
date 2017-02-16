@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/lib/font-awesome.min.css">
+    <style type="text/css">
+        .animation-container{width: 100%}
+        .animation-container > div{display: inline-block}
+        .animation-container .cloud-picture>img{width: 60px;position: absolute;top: 0;right: 0;-webkit-animation: cloudMove 45s infinite; /* Safari 4.0 - 8.0 */ animation: cloudMove 45s infinite;}
+        .animation-container .city-picture{background-image: url(images/animation/cityimage.jpg);background-repeat: repeat-x;display: block;height: 150px;background-size: 90% 150px;-webkit-animation: cityMove 45s infinite; /* Safari 4.0 - 8.0 */ animation: cityMove 15s infinite;border-bottom: 1px solid #555}
+        .animation-container .plane-picture>img{width: 50px;position: absolute;top: 50px;left: 0;-webkit-animation: moveImg 25s infinite; /* Safari 4.0 - 8.0 */ animation: moveImg 25s infinite;}
+        @-webkit-keyframes cloudMove{
+            from {right:0}
+            to {right: 100%}
+        }
+        @keyframes cloudMove {
+            from {right:0}
+            to {right: 100%}
+        }
+        @-webkit-keyframes cityMove{
+            from {background-position-x:0}
+            to {background-position-x:-500px}
+        }
+        @keyframes cityMove {
+            from {background-position-x:0}
+            to {background-position-x:-500px}
+        }
+        @-webkit-keyframes moveImg {
+            from {left: 0px;}
+            to {left: 95%}
+        }
+
+        @keyframes moveImg {
+            from {left: 0px;}
+            to {left: 95%}
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <div class="cloud-picture"><img src="images/animation/cloud.png"></div>
+        <div class="city-picture"></div>
+        <div class="plane-picture"><img src="images/animation/aeroplane.png"></div>
+    </div>
+	<script type="text/javascript" src="javascripts/lib/jquery.js"></script>			
+</body>
+</html>
